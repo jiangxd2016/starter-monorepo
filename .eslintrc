@@ -1,8 +1,0 @@
-{
-  "extends": [
-    "@estjs/eslint-config"
-  ],
-  "rules": {
-    "no-console": "off"
-  }
-}
