@@ -1,5 +1,5 @@
 {
-  "name": "pkg-name",
+  "name": "@estjs/pkg-name-monorepo",
   "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@7.2.1",
@@ -14,41 +14,20 @@
   },
   "bugs": "https://github.com/estjs/pkg-name/issues",
   "keywords": [],
-  "sideEffects": false,
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
-    }
-  },
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "typesVersions": {
-    "*": {
-      "*": [
-        "./dist/*",
-        "./dist/index.d.ts"
-      ]
-    }
-  },
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "dev": "pnpm -r --filter=./packages/* run dev",
     "build": "rimraf packages/*/dist && pnpm -r --filter=./packages/* run build ",
-    "lint": "eslint --cache --fix \"./src/*.{ts,tsx,js,vue}\"",
+    "lint": "eslint --cache --fix \"./**/src/*.{ts,tsx,js,vue}\"",
     "test": "vitest -r test",
+    "clean": "rimraf ./packages/**/dist",
     "play": "pnpm run -C playground dev",
     "play:build": "pnpm run -C playground build",
     "play:test": "pnpm run -C playground test -u",
     "play:preview": "pnpm run -C playground preview",
     "typecheck": "tsc  --noEmit",
     "coverage": "vitest run --coverage",
-    "prepublishOnly": "pnpm run build",
-    "release": "bumpp --commit --tag --push && pnpm publish --access public"
+    "prerelease": "pnpm run clean && pnpm run typecheck && pnpm run test && pnpm run build",
+    "release": "pnpm run prerelease && pnpm run changelog && bumpp --commit --tag --push  && pnpm -r publish --access public "
   },
   "devDependencies": {
     "@estjs/eslint-config": "^0.6.7",
