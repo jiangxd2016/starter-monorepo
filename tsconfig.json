@@ -14,10 +14,10 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
+    "checkJs": true,
     "experimentalDecorators": true,
     "types": [
       "vitest/globals",
-      "vitest/globals"
     ]
   },
   "exclude": [
