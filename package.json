@@ -18,7 +18,7 @@
     "dev": "pnpm -r --filter=./packages/* run dev",
     "build": "rimraf packages/*/dist && pnpm -r --filter=./packages/* run build ",
     "lint": "eslint --cache --fix \"./**/src/*.{ts,tsx,js,vue}\"",
-    "test": "vitest -r test",
+    "test": "pnpm -r run test",
     "clean": "rimraf ./packages/**/dist",
     "play": "pnpm run -C playground dev",
     "play:build": "pnpm run -C playground build",
