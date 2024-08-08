@@ -12,5 +12,5 @@ temp
 .eslintcache
 server/dist
 public/dist
-.nx
+.turbo
 
