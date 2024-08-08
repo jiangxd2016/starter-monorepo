@@ -1,7 +1,9 @@
 import { defineConfig } from 'vitest/config';
+
 export default defineConfig({
   define: {
     __DEV__: true,
+    __BROWSER__: true,
   },
   test: {
     coverage: {
@@ -19,6 +21,8 @@ export default defineConfig({
       ],
     },
     globals: true,
+    environment: 'jsdom',
     watch: false,
+    exclude: ['**/node_modules/**', '**/e2e/**'],
   },
 });
