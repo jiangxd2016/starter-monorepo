@@ -3,15 +3,14 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", "vendors/**"],
-      "env": ["NODE_ENV"]
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": ["dist/**"]
     },
+    "lint": {},
+    "typecheck": {},
     "dev": {
-      "cache": false
-    },
-    "//#docs:build": {
-      "dependsOn": ["^build"],
-      "outputs": ["docs/dist/**"]
+      "cache": false,
+      "persistent": true
     }
   }
 }
