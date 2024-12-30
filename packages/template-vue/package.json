@@ -2,7 +2,6 @@
   "name": "template-vue",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@9.7.0",
   "type": "module",
   "scripts": {
     "build": "vite build",
@@ -21,7 +20,7 @@
     "vue-router": "^4.4.3"
   },
   "devDependencies": {
-    "@estjs/eslint-config": "^1.2.4",
+    "@estjs/eslint-config": "^1.2.12",
     "@estjs/tools": "^0.1.28",
     "@iconify-json/carbon": "^1.1.37",
     "@types/node": "^22.1.0",

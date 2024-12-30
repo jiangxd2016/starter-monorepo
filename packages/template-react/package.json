@@ -1,0 +1,39 @@
+{
+  "name": "starter-react",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint --cache ./src --fix",
+    "typecheck": "vue-tsc --noEmit",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:watch": "vitest --watch"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.5.2",
+    "@reduxjs/toolkit": "^2.5.0",
+    "antd": "^5.19.1",
+    "axios": "^1.7.9",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-redux": "^9.1.2"
+  },
+  "devDependencies": {
+    "@estjs/tools": "^0.1.35",
+    "@iconify-json/carbon": "^1.2.5",
+    "@types/node": "^20.17.10",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "@unocss/reset": "^0.65.3",
+    "@vitejs/plugin-react-swc": "^3.7.2",
+    "eslint": "^9.17.0",
+    "jsdom": "^25.0.1",
+    "typescript": "^5.7.2",
+    "unocss": "^0.65.3",
+    "vite": "^6.0.6",
+    "vitest": "^2.0.1"
+  }
+}

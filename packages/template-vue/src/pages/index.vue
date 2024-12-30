@@ -17,35 +17,16 @@ const go = () => {
 </script>
 
 <template>
-  <div ref="IndexRef" class="wrapper">
-    <div i-carbon-campsite inline-block text-4xl />
-    <Counter />
-    <p>
-      <a rel="noreferrer" href="" target="_blank"> Vite Starter </a>
-    </p>
+  <div ref="IndexRef" class="wrapper" @mouseenter="()=>name ='123'" @mouseleave="()=>name =''" :style="{
+    color:name === '123' ? 'red' : 'black'
+  }">
+
     <p>
       <em text-sm op75>Opinionated Vite Starter Template</em>
     </p>
+    <p>{{ name }}</p>
 
-    <div py-4 />
 
-    <input
-      id="input"
-      v-model="name"
-      placeholder="What's your name?"
-      type="text"
-      autocomplete="false"
-      p="x-4 y-2"
-      w="250px"
-      text="center"
-      bg="transparent"
-      border="~ rounded gray-200 dark:gray-700"
-      outline="none active:none"
-      @keydown.enter="go"
-    />
 
-    <div>
-      <button class="m-3 text-sm btn" :disabled="!name" @click="go">Go</button>
-    </div>
   </div>
 </template>

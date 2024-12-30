@@ -50,7 +50,7 @@
     "release": "bumpp --commit --tag --push && pnpm publish --access public"
   },
   "devDependencies": {
-    "@estjs/eslint-config": "^1.2.4",
+    "@estjs/eslint-config": "^1.2.12",
     "@vitest/coverage-v8": "^2.0.5",
     "bumpp": "^9.4.2",
     "dayjs": "^1.11.12",
